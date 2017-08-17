@@ -1,0 +1,33 @@
+<!-- sections/header -->
+<div data-section-id="{{ section.id }}" data-section-type="header-section">
+  <header role="banner">
+    <div>hamburger</div>
+
+    <div itemscope itemtype="http://schema.org/Organization">
+      <a href="/" itemprop="url">
+        <img src="{{ section.settings.logo }}" itemprop="logo">
+      </a>
+    </div>
+
+    <div>
+      <a href="/cart">
+        {% include 'icon-cart' %}
+        {{ 'layout.cart.title' | t }}
+        ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
+      </a>
+    </div>
+  </header>
+</div>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Header Logo"
+      }
+    ]
+  }
+{% endschema %}
