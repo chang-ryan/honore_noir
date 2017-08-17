@@ -1,4 +1,8 @@
 /*================ Site Header ================*/
+#shopify-section-header {
+  @include prefix(position, sticky, webkit moz ms o spec);
+}
+
 .SiteHeader {
   display: grid;
   grid-template-columns: 100px auto 100px;
