@@ -1,9 +1,25 @@
 /*================ Site Header ================*/
-.site-logo {
-  display: block;
+.SiteHeader {
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  grid-template-rows: 50px;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
 
-  img {
-    display: block;
-    width: 100%;
-  }
+.SiteHeader__menu {
+  grid-area: menu / 1 / 1;
+  padding-left: 1em;
+}
+
+.SiteHeader__logo {
+  grid-area: logo / 2 / 1;
+  justify-self: center;
+}
+
+.SiteHeader__cart {
+  grid-area: cart / 3 / 1;
+  justify-self: right;
+  padding-right: 1em;
 }

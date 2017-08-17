@@ -1,15 +1,15 @@
 <!-- sections/header -->
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
-  <header role="banner">
-    <div>hamburger</div>
+  <header class="SiteHeader" role="banner">
+    <div class="SiteHeader__menu">hamburger</div>
 
-    <div itemscope itemtype="http://schema.org/Organization">
+    <div class="SiteHeader__logo" itemscope itemtype="http://schema.org/Organization">
       <a href="/" itemprop="url">
         <img src="{{ section.settings.logo }}" itemprop="logo">
       </a>
     </div>
 
-    <div>
+    <div class="SiteHeader__cart">
       <a href="/cart">
         {% include 'icon-cart' %}
         {{ 'layout.cart.title' | t }}
