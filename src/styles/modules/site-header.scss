@@ -1,6 +1,8 @@
 /*================ Site Header ================*/
+// Shopify dynamically places sections in a div when using {% section header %}.
 #shopify-section-header {
   @include prefix(position, sticky, webkit moz ms o spec);
+  top: 0;
 }
 
 .SiteHeader {
